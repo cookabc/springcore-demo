@@ -1,7 +1,6 @@
 package com.springcore;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * AppBeanConfig
@@ -9,7 +8,6 @@ import org.springframework.context.annotation.Configuration;
  * @author: Xugang Song
  * @create: 1/3/21
  */
-@Configuration
 public class AppConfig {
 
     @Bean
