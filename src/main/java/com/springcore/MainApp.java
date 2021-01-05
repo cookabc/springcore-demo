@@ -11,7 +11,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class MainApp {
 
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+        context.register(AppConfig.class);
+        context.refresh();
         context.registerShutdownHook();
         MessageService service = context.getBean(MessageService.class);
 
