@@ -14,12 +14,13 @@ public class MainApp {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
         context.register(AppConfig.class);
         context.refresh();
-        context.registerShutdownHook();
-        MessageService service = context.getBean(MessageService.class);
 
+        MessageService service = context.getBean(MessageService.class);
         String message = "Hello World";
         service.sendMessage(message);
         System.out.println(service.getMessage());
+
+        context.close();
     }
 
 }
